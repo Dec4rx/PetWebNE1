@@ -11,7 +11,7 @@ function ProfileCard() {
     <div class="div_card-profile">
         <Container>
         <Card className="w-50 p-3">
-        <h1>MI perfil</h1>
+        <h1>Mi perfil</h1>
           <Card.Header className="w-100 text-center">Nombre</Card.Header>
       <Row>
         <Col>
@@ -27,7 +27,7 @@ function ProfileCard() {
               <ListGroup.Item>Genero: </ListGroup.Item>
               </Col>
             </Row>
-            <ListGroup.Item>Direccion: </ListGroup.Item>
+            <ListGroup.Item>Dirección: </ListGroup.Item>
             <ListGroup.Item>Informacion de contacto</ListGroup.Item>
             <ListGroup.Item>Correo: </ListGroup.Item>
             <ListGroup.Item>Telefono: </ListGroup.Item>

@@ -67,7 +67,7 @@ function SearchResult() {
             <Container>
                 <Button className="d-block m-2 ms-auto " as={Link} to='newproduct'>Add product</Button>
                 <Form.Group className="d-flex gap-2">
-                    <Form.Label>categoria: </Form.Label>
+                    <Form.Label>Categoria: </Form.Label>
                     <Form.Control
                     type="text"
                     

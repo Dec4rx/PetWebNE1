@@ -11,7 +11,7 @@ function Login(){
         <Container className="w-50">
         <Card className="p-3">
           <Card.Header className="text-center">
-            <h2>Inicio de sesion</h2>
+            <h2>Inicio de sesión</h2>
           </Card.Header>
         <Form>
       <Form.Group className="mb-3" controlId="formBasicEmail">
