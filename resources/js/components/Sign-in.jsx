@@ -4,16 +4,20 @@ import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
-function getToday(){
-  var today = new Date();
-  var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-  var dateTime = date;
+  function getToday(){
+    var today = new Date();
+    var diaHoy = today.getDate();
+    if(diaHoy.toString().length<=1) diaHoy='0'+diaHoy
+    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+diaHoy; //'2022-12-03'
+    var dateTime = date;
 
-  var hoy = document.getElementById('birthDate');
-  
-  hoy.max=date;
-}
+    var hoy = document.getElementById('birthDate');
+    
+    hoy.max=date;
+  }
 
 function confirmPassword() {
   let pssw;
@@ -34,6 +38,8 @@ function confirmPassword() {
 }
 
 function Signin() {
+  const [name, setName] = useState();
+  
   return (
     <Container className="w-50" >
         <Card className="m-3 p-3">
@@ -148,6 +154,7 @@ function Signin() {
         <Form.Label>Confirmar Contraseña</Form.Label>
         <Form.Control
         onChange={confirmPassword}
+        
         name='Confirmpassword'
         type="password"
         pattern="(?=.*?[#?!@$%^&*-\]\[]){8,20}"
@@ -156,7 +163,7 @@ function Signin() {
         />
       </Form.Group>
 
-      <Button id='btn_submit' variant="primary" type='submit'>
+      <Button id='btn_submit' variant="primary" as={Link} to='/ProyectoFinal/public/'>
         Submit
       </Button>
     </Form>
